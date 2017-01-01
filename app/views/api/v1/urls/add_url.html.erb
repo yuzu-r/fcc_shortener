@@ -1,0 +1,9 @@
+<h3>Add URL</h3>
+Converting <%= @mine %>...
+<%= form_for :url, url: api_v1_new_path(@url), method: :post do |f| %>
+  <%=f.label :long_url %>
+  <%=f.text_field :long_url, class: 'form-control', value: @mine %>
+  <%=f.button 'convert' %>
+<% end %>
+
+<!-- You can do form_for(@post, format: :json) do ... -->
