@@ -25,12 +25,15 @@
 <h3>Example Output:</h3>
 <h4>Valid URL</h4>
 <span class="code">
-  
+  {"original_url":"http://www.duckduckgo.com","short_url":"3"}
 </span>
 <h4>Invalid URL</h4>
 <span class="code">
   {"error_message":"Must start with http:// or https:// to shorten!"}
 </span>
+
+<h3>Usage:</h3>
+<span class="code"><%= @request %>/3</span> will redirect to http://www.duckduckgo.com.
 
 <p>
   This is a Rails 4 project. The POST action is performed via a hidden form.
