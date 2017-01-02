@@ -1,0 +1,42 @@
+<h1>FreeCodeCamp API Project: URL Shortener Microservice</h1>
+<p>Enter a URL as a parameter to /api/v1/new?url=<i>your_url</i></p>
+<p>Some checking of <i>your_url</i> is performed: </p>
+<ul>
+  <li>must begin with <span class='code'>http://</span> or 
+    <span class='code'>https://</span>
+  </li>
+  <li>additional checking performed by Ruby's URI module.</li>
+</ul>
+<p>If the url is valid, a JSON response containing the original and shortened URL is returned. If the url is invalid, a JSON response containing an error description is returned.</p>
+
+<p>To use the shortened form of the URL, access <span class='code'>
+  <%= @request %>/short_url</span> and you will be automatically redirected to your original URL. Note: this service doesn't validate that the address goes somewhere valid! You'll still receive 404 messages or other normal internet-ish messages.</span>
+</p>
+<h3>Example URL: </h3>
+<h4>Valid URL</h4>
+<span class="code">
+  <%= @request %>/api/v1/new?url=http://www.duckduckgo.com
+</span>
+<h4>Invalid URL</h4>
+<span class="code">
+  <%= @request %>/api/v1/new?url=duck
+</span>
+
+<h3>Example Output:</h3>
+<h4>Valid URL</h4>
+<span class="code">
+  
+</span>
+<h4>Invalid URL</h4>
+<span class="code">
+  {"error_message":"Must start with http:// or https:// to shorten!"}
+</span>
+
+<p>
+  This is a Rails 4 project. The POST action is performed via a hidden form.
+  Encryption of the URL is performed as suggested by <a href='https://github.com/delight-im/ShortURL' target='_blank' >ShortURL</a>.
+</p>
+<p>
+  Feel free to visit the <a href='https://github.com/yuzu-r/fcc_shortener' target='_blank'>github repo</a>.
+</p>
+<p>Learn more about <a href='https://www.freecodecamp.com' target='_blank'>FreeCodeCamp</a>.</p>
