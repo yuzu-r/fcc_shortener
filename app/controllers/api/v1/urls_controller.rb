@@ -7,6 +7,8 @@ class Api::V1::UrlsController < ApplicationController
   def create_url
     @url = Url.create(url_params)
     if @url.valid?
+      #puts request.base_url
+      @encoded_path = ShortURL.encode(@url.id)
       render :response
     else
       render :error

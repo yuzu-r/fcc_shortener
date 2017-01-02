@@ -1,2 +1,2 @@
 json.original_url @url.long_url
-json.short_url 'localhost:3030/' + @url.id.to_s
+json.short_url @encoded_path
