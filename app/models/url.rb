@@ -1,7 +1,7 @@
 class Url < ActiveRecord::Base
   validate :is_url_valid?, :on => :create
   validates :long_url, presence: { message: 'url is missing'}
-  validates :long_url, uniqueness: { message: 'url is not unique'}
+  #validates :long_url, uniqueness: { message: 'url is not unique'}
 
   private
     def is_url_valid?
