@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     end
   end
   get '/:url' => 'urls#goto'
+  root 'urls#about'
 end
